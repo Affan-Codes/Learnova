@@ -38,6 +38,7 @@ import {
 } from "@/components/ui/select";
 import { SelectValue } from "@radix-ui/react-select";
 import RichTextEditor from "@/components/rich-text-editor/Editor";
+import Uploader from "@/components/file-uploader/Uploader";
 
 const CourseCreationPage = () => {
   const form = useForm<CourseSchemaType>({
@@ -165,7 +166,8 @@ const CourseCreationPage = () => {
                   <FormItem className="w-full">
                     <FormLabel>Thumbnail Image</FormLabel>
                     <FormControl>
-                      <Input placeholder="Thumnail Image" {...field} />
+                      <Uploader />
+                      {/* <Input placeholder="Thumnail Image" {...field} /> */}
                     </FormControl>
                     <FormMessage />
                   </FormItem>
